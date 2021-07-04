@@ -1,6 +1,10 @@
 const express=require('express');
+const connectDB=require('./config/db');
 
 const app=express();
+//connect database
+connectDB();
+
 
 app.use('/api/users',require('./routes/users'));
 app.use('/api/contacts',require('./routes/contacts'));
